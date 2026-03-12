@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/ilir/Documents/PressoirByzantin/next-app/components/ServiceWorkerRegister.tsx"],"sourcesContent":["\"use client\";\n\nimport { useEffect } from \"react\";\n\nexport default function ServiceWorkerRegister() {\n  useEffect(() => {\n    if (\"serviceWorker\" in navigator) {\n      navigator.serviceWorker.register(\"/sw.js\").catch(() => {\n        // SW registration failed — non-critical\n      });\n    }\n  }, []);\n\n  return null;\n}\n"],"names":[],"mappings":";;;;AAEA;;AAFA;;AAIe,SAAS;;IACtB,IAAA,0KAAS;2CAAC;YACR,IAAI,mBAAmB,WAAW;gBAChC,UAAU,aAAa,CAAC,QAAQ,CAAC,UAAU,KAAK;uDAAC;oBAC/C,wCAAwC;oBAC1C;;YACF;QACF;0CAAG,EAAE;IAEL,OAAO;AACT;GAVwB;KAAA"}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/ilir/Documents/PressoirByzantin/next-app/app/template.tsx"],"sourcesContent":["\"use client\";\n\nimport { motion } from \"framer-motion\";\n\nexport default function Template({ children }: { children: React.ReactNode }) {\n    return (\n        <motion.div\n            initial={{ opacity: 0, y: 20 }}\n            animate={{ opacity: 1, y: 0 }}\n            exit={{ opacity: 0, y: 20 }}\n            transition={{\n                type: \"spring\",\n                stiffness: 260,\n                damping: 20,\n                duration: 0.6\n            }}\n            className=\"min-h-[100dvh] flex flex-col\"\n        >\n            {children}\n        </motion.div>\n    );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS,SAAS,EAAE,QAAQ,EAAiC;IACxE,qBACI,6LAAC,uMAAM,CAAC,GAAG;QACP,SAAS;YAAE,SAAS;YAAG,GAAG;QAAG;QAC7B,SAAS;YAAE,SAAS;YAAG,GAAG;QAAE;QAC5B,MAAM;YAAE,SAAS;YAAG,GAAG;QAAG;QAC1B,YAAY;YACR,MAAM;YACN,WAAW;YACX,SAAS;YACT,UAAU;QACd;QACA,WAAU;kBAET;;;;;;AAGb;KAjBwB"}}]
+}

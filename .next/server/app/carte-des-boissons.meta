@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/carte-des-boissons/layout,_N_T_/carte-des-boissons/page,_N_T_/carte-des-boissons"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/carte-des-boissons/__PAGE__",
+    "/carte-des-boissons",
+    "/_index",
+    "/_head"
+  ]
+}

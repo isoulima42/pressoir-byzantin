@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/a-propos/page": "app/a-propos/page.js",
+  "/admin/[[...index]]/page": "app/admin/[[...index]]/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/api/reservation/route": "app/api/reservation/route.js",
+  "/carte-des-boissons/page": "app/carte-des-boissons/page.js",
+  "/carte-des-mets/page": "app/carte-des-mets/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/event-traiteur/page": "app/event-traiteur/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/galerie/page": "app/galerie/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/page": "app/page.js",
+  "/reservation/confirmation/page": "app/reservation/confirmation/page.js",
+  "/reservation/page": "app/reservation/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+}

@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /reservation/confirmation
+
+Sitemap: https://lepressoirbyzantin.ch/sitemap.xml

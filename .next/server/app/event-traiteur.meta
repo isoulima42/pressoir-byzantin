@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/event-traiteur/layout,_N_T_/event-traiteur/page,_N_T_/event-traiteur"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/event-traiteur/__PAGE__",
+    "/event-traiteur",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/menu",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/menu(?:/)?$"
+    },
+    {
+      "source": "/menu/",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/menu/(?:/)?$"
+    },
+    {
+      "source": "/carte-des-boissons",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/carte-des-boissons(?:/)?$"
+    },
+    {
+      "source": "/carte-des-boissons/",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/carte-des-boissons/(?:/)?$"
+    },
+    {
+      "source": "/livraison",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/livraison(?:/)?$"
+    },
+    {
+      "source": "/livraison/",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/livraison/(?:/)?$"
+    },
+    {
+      "source": "/food/:slug",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/food(?:/([^/]+?))(?:/)?$"
+    },
+    {
+      "source": "/food/:slug/",
+      "destination": "/carte-des-mets",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/food(?:/([^/]+?))/(?:/)?$"
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/feed(?:/)?$"
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/feed/(?:/)?$"
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/comments/feed(?:/)?$"
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/comments/feed/(?:/)?$"
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/wp-json(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/admin",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/wp-admin(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/admin",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/wp-login\\.php(?:/)?$"
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/wp-content(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    },
+    {
+      "source": "/page/:num",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/page(?:/([^/]+?))(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/[[...index]]",
+      "regex": "^/admin(?:/(.+?))?(?:/)?$",
+      "routeKeys": {
+        "nxtPindex": "nxtPindex"
+      },
+      "namedRegex": "^/admin(?:/(?<nxtPindex>.+?))?(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/a-propos",
+      "regex": "^/a\\-propos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/a\\-propos(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/reservation",
+      "regex": "^/api/reservation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reservation(?:/)?$"
+    },
+    {
+      "page": "/carte-des-boissons",
+      "regex": "^/carte\\-des\\-boissons(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/carte\\-des\\-boissons(?:/)?$"
+    },
+    {
+      "page": "/carte-des-mets",
+      "regex": "^/carte\\-des\\-mets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/carte\\-des\\-mets(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/event-traiteur",
+      "regex": "^/event\\-traiteur(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/event\\-traiteur(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/galerie",
+      "regex": "^/galerie(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/galerie(?:/)?$"
+    },
+    {
+      "page": "/manifest.webmanifest",
+      "regex": "^/manifest\\.webmanifest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
+    },
+    {
+      "page": "/reservation",
+      "regex": "^/reservation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reservation(?:/)?$"
+    },
+    {
+      "page": "/reservation/confirmation",
+      "regex": "^/reservation/confirmation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reservation/confirmation(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

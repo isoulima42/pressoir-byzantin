@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/a-propos/page": "/a-propos",
+  "/admin/[[...index]]/page": "/admin/[[...index]]",
+  "/api/contact/route": "/api/contact",
+  "/api/reservation/route": "/api/reservation",
+  "/carte-des-boissons/page": "/carte-des-boissons",
+  "/carte-des-mets/page": "/carte-des-mets",
+  "/contact/page": "/contact",
+  "/event-traiteur/page": "/event-traiteur",
+  "/favicon.ico/route": "/favicon.ico",
+  "/galerie/page": "/galerie",
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
+  "/page": "/",
+  "/reservation/confirmation/page": "/reservation/confirmation",
+  "/reservation/page": "/reservation",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

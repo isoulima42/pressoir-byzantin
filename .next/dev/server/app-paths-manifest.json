@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/a-propos/page": "app/a-propos/page.js",
+  "/carte-des-mets/page": "app/carte-des-mets/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/event-traiteur/page": "app/event-traiteur/page.js",
+  "/galerie/page": "app/galerie/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/page": "app/page.js",
+  "/reservation/page": "app/reservation/page.js"
+}
