@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ─── Brand colors (legacy, keep for compatibility) ─── */
+  --color-brand-orange: #fb8f2c;
+  --color-brand-navy: #0e1c21;
+  --color-brand-dark: #0b1214;
+  --color-brand-cream: #fffcec;
+
+  /* ─── Byzantin palette ─── */
+  --color-byzantin-gold: #c8a456;
+  --color-byzantin-gold-light: #d4b978;
+  --color-byzantin-gold-dark: #a68935;
+  --color-byzantin-ivory: #faf8f5;
+  --color-byzantin-cream: #f0ebe3;
+  --color-byzantin-parchment: #e8dfd2;
+  --color-byzantin-chocolate: #1a1612;
+  --color-byzantin-espresso: #2c2418;
+  --color-byzantin-sienna: #a0522d;
+  --color-byzantin-olive: #6b7c3e;
+  --color-byzantin-stone: #d4c5a9;
+  --color-byzantin-slate: #2c2c2c;
+  --color-byzantin-charcoal: #1a1a1a;
+
+  /* ─── Neutral palette ─── */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e6e6e6;
+  --color-neutral-300: #ccc;
+  --color-neutral-400: #999;
+  --color-neutral-500: #808285;
+  --color-neutral-600: #666;
+  --color-neutral-700: #54595f;
+  --color-neutral-800: #3a3a3a;
+  --color-neutral-900: #222;
+
+  /* ─── Font families ─── */
+  --font-sans: var(--font-body), ui-serif, Georgia, serif;
+  --font-heading: var(--font-display), ui-serif, Georgia, serif;
+  --font-subtitle: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-nav: var(--font-raleway), ui-sans-serif, system-ui, sans-serif;
+  --font-price: var(--font-mono), ui-monospace, monospace;
+  --font-accent: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base ─── */
+
+body {
+  background: var(--color-brand-dark);
+  color: var(--color-brand-cream);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-byzantin-gold) 70%, transparent);
+  color: var(--color-byzantin-chocolate);
+}
+
+/* ─── Typography hierarchy ─── */
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h2,
+h3 {
+  font-family: var(--font-subtitle);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-nav);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ─── Custom scrollbar (desktop) ─── */
+
+@media (hover: hover) and (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-byzantin-chocolate);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-byzantin-gold);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-byzantin-gold-light);
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-byzantin-gold) var(--color-byzantin-chocolate);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Scrollbar hide (horizontal navs) ─── */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Glow effects ─── */
+
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 10px rgba(200, 164, 86, 0.4));
+}
+
+.drop-shadow-glow-orange {
+  filter: drop-shadow(0 0 10px rgba(251, 143, 44, 0.4));
+}
+
+/* ─── Noise background ─── */
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ─── Interactive cursor ─── */
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* ─── Input focus glow ─── */
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(200, 164, 86, 0.15);
+}
+
+/* ─── Focus ─── */
+
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-byzantin-gold) 85%, white);
+  outline-offset: 3px;
+}
+
+/* ─── Shimmer animation for CTA ─── */
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background-image: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.15) 37%,
+    transparent 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ─── Scroll snap for category nav ─── */
+
+@media (max-width: 768px) {
+  .scrollbar-hide {
+    scroll-snap-type: x mandatory;
+  }
+
+  .scrollbar-hide > * {
+    scroll-snap-align: center;
+  }
+}
+
+/* ─── Reduced motion ─── */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
