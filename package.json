@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "eslint",
     "test:e2e": "playwright test",
     "sync:copy": "node scripts/sync-copy-to-sanity.cjs"
